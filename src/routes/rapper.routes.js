@@ -30,4 +30,41 @@ rapperRoutes.get("/", (req,res) => {
     return res.status(200).json(rappers);
 });
 
+rapperRoutes.post("/", (req, res) => {
+    const {nome, idade, descricaoFisica, envolvimento} = req.body;
+
+    if (!nome || !idade || !envolvimento) {
+        return res.status(400).json({
+            message: "Os campos nome, idade e envolvimento são obrigatórios",
+        });
+    }
+
+    if (envolvimento != "sim" && envolvimento != "não"){
+        return res.status(400). send ({
+            message: "Digite 'sim' ou 'não'!",
+        });
+    }
+
+    if(Number.isInteger(idade) == false){
+        return res.status(400). send ({
+            message: "Digite um número inteiro!",
+        });
+    }
+
+    const novoRapper = {
+        id: Math.floor(Math.random() * 999999),
+        nome,
+        idade,
+        descricaoFisica,
+        envolvimento
+    };
+
+    rappers.push(novoRapper);
+
+    return res.status(201).json ({
+        message: "Rapper cadastrado com sucesso!",
+        novoRapper,
+    });
+});
+ 
 export default rapperRoutes;
