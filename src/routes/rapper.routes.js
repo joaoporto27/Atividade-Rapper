@@ -66,5 +66,19 @@ rapperRoutes.post("/", (req, res) => {
         novoRapper,
     });
 });
+
+rapperRoutes.get("/:id", (req, res) => {
+    const { id } = req.params;
+
+    const rapper = rappers.find((artista) => artista.id == id);
+
+    if (!rapper){
+        return res
+        .status(404)
+        .json({message:`Rapper com id ${id} não encontrado!`});
+    }
+
+    return res.status(200).json(rapper);
+});
  
 export default rapperRoutes;
