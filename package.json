@@ -1,0 +1,21 @@
+{
+  "name": "atividade-rapper",
+  "version": "1.0.0",
+  "description": "Esse projeto está sendo feito a pedido do profesor Felipe ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npm run dev",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [
+    "SENAI"
+  ],
+  "author": "João Vitor Porto Sales",
+  "license": "MIT ",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  }
+}
