@@ -65,4 +65,4 @@
   - O projeto foi muito bem desenvolvido, com uma boa organização de código e estruturação das rotas.
   - A validação dos dados foi bem implementada e os códigos de status HTTP estão corretos.
   - A única observação é em relação ao repositório do projeto, que não possui uma descrição.
-  - Parabéns, João! Ótimo trabalho! 👏👏👏
+  - Parabéns, Porto Sales! Ótimo trabalho! 👏👏👏
